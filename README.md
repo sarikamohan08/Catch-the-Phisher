@@ -45,7 +45,7 @@ like Postman , Thunderclient(inbuilt in vscode) it will jsonify the output and p
 
 
 example input data:
-
+''''
 
 {
 
@@ -115,5 +115,5 @@ example input data:
 
 }
 
-
+''''
 ![Resultcount](phising.PNG)
