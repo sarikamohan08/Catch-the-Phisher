@@ -34,7 +34,7 @@ By using Kfold Cross Validation we compare different models.
 
 finally Random forest and XGBoost algorithm works fine and used for further prediction 
 
-#Accuracy
+###Accuracies
 
 Random forest shows accuracy of 96.38% 
 
