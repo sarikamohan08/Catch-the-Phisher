@@ -27,16 +27,14 @@ Chi_Squared test is used to find the relationship between categorical features b
 We hypothesize H0:Feature is independent of Result as our null statement
 We choose our p-value level to 0.05, If the p-value test result is more than 0.05 we fail to reject the Null Hypothesis. This means, there is no relationship between the feature  and Result feature based on the Chi-Square test of independence.
 For the features 'Statistical_report','Iframe','popUpWidnow','on_mouseover','Submitting_to_email','HTTPS_token','port','Favicon','having_At_Symbol' we fail to reject the Null hypothesis. So they are droped
-### Model Selection
-By using Kfold Cross Validation we compare different models.
-![Model accuracies](https://user-images.githubusercontent.com/60782716/87711717-49458900-c7c5-11ea-9976-36e855051847.PNG)
+
 
 
 finally Random forest and XGBoost algorithm works fine and used for further prediction 
 
 ###Accuracies
 
-Random forest shows accuracy of 96.38% 
+Random forest shows accuracy of 96% 
 
-XGBoost algorithm shows accuracy of 93.84%
+XGBoost algorithm shows accuracy of 96.38%
  
