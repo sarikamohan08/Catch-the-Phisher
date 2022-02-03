@@ -48,7 +48,11 @@ example input data:
 
 {
                              "having_IP_Address":-1, 
+
+
                              "URL_Length":1,
+
+                             
                              "Shortining_Service":1,
                              "double_slash_redirecting":-1,
                              "Prefix_Suffix":-1,
