@@ -3,8 +3,8 @@
      Phishing is the fraudulent attempt to obtain sensitive data, such as usernames, passwords by disguising a fake website
      as a trustworthy website.Therefore identifying Phishing websites maximizes internet security.
 ### Target Variable: Result
-    If Result = 0, Not a Phishing website
-    If Result = 1, Phishing website.
+    If Result = 1, Not a Phishing website
+    If Result = -1, Phishing website.
     
 Data is having 30 predictor attributes and one response variable with binary classes. 0 out of 2456 records is missing for all columns.1362 records are of trust-worthy websites(majority class) and  1094 records are Phishing websites(Minority class)
 ![Resultcount](https://user-images.githubusercontent.com/60782716/87672405-84799500-c790-11ea-95cf-270642efe661.PNG)
@@ -31,49 +31,8 @@ For the features 'Statistical_report','Iframe','popUpWidnow','on_mouseover','Sub
 By using Kfold Cross Validation we compare different models.
 ![Model accuracies](https://user-images.githubusercontent.com/60782716/87711717-49458900-c7c5-11ea-9976-36e855051847.PNG)
 
-KnearestNeighbors and RandomForest models have Greater accuracy and less standard deviation.So these models are taken for Tuning
-Before Hyper parameter Tuning, Principal component analysis is useful here to reduce the dimensions. The last 8 dimensions which doesn't have much variance is dropped.
-Since there is an imbalance between classes model will be biased towards the majority class, Inorder to rectify that Synthetic Minority Over-sampling Technique (SMOTE)  is applied.
-Now using GridSearch Best Parameters for both Algorithms are obtained.
 
-### Model Efficiency
- #### Random Forest:
-    The model had a Training accuracy of  0.9944289693593314 and Testing accuracy of 0.9857723577235772
-                 precision    recall  f1-score   support
+Random forest shows accuracy of 96.38% 
 
-               0       0.99      0.99      0.99       285
-               1       0.98      0.99      0.98       207
-
-        accuracy                           0.99       492
-       macro avg       0.99      0.99      0.99       492
-    weighted avg       0.99      0.99      0.99       492
-    The Roc curve is given below:
-    
-  ![aucrf](https://user-images.githubusercontent.com/60782716/87716546-9a0cb000-c7cc-11ea-8d73-e5f211b9342e.PNG)
-    
-    
-    
-  #### KNN:
-    The model had a Training accuracy of  0.9935004642525533 and Testing accuracy of0.979674796747967
-    
-    
-                    precision    recall  f1-score   support
-
-               0       1.00      0.97      0.98       285
-               1       0.96      1.00      0.98       207
-
-        accuracy                           0.98       492
-       macro avg       0.98      0.98      0.98       492
-    weighted avg       0.98      0.98      0.98       492
-    The Roc curve is given below:
-
- ![aucknn](https://user-images.githubusercontent.com/60782716/87716534-9711bf80-c7cc-11ea-9b04-84456b1c02fb.PNG)
-
-
-
-
-
-#### Since the Recall of minortity class ie Result=1 is more important to the business problem KNN is our final model
-
-
+XGBoost algorithm shows accuracy of 93.84%
  
